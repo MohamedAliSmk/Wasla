@@ -13,15 +13,15 @@ driver = webdriver.Chrome(options=options)
 
 # log in to Microsoft login
 driver.get('https://login.microsoftonline.com/')
-email_input = driver.find_element('i0116')
-email_input.send_keys('karimelanbry@paymob.com')
-next_button = driver.find_element_by_id('idSIButton9')
+email_input = driver.find_element(By.ID,'i0116')
+email_input.send_keys('abc@paymob.com')
+next_button = driver.find_element(By.ID,'idSIButton9')
 next_button.click()
 password_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'i0118')))
-password_input.send_keys('KoKo.2010')
-signin_button = driver.find_element_by_id('idSIButton9')
+password_input.send_keys('abc')
+signin_button = driver.find_element(By.ID,'idSIButton9')
 signin_button.click()
-time.sleep(1500) # wait for the page to load
+time.sleep(30) # wait for the page to load
 
 # navigate to the URL
 url = 'https://accept-reporting.paymobsolutions.com/anotherpanel/payment_methods/transaction/'
