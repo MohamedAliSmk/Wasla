@@ -14,4 +14,7 @@ urlpatterns = [
     # Matches any html file
     re_path(r'^.*\.*', views.pages, name='pages'),
 
+    path('upload/', views.upload_merchants, name='upload_merchants'),
+    path('upload/success/', views.upload_success, name='upload_success'),
+
 ]
